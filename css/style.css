@@ -1,0 +1,487 @@
+/*GLOBAL RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+ }
+
+/*
+   CONTAINER
+ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/*
+   HERO SLIDER
+ */
+.hero-slider {
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: relative;
+  overflow: hidden;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
+  pointer-events: none;   
+}
+
+.slide.active {
+  opacity: 1;
+  pointer-events: auto;   
+}
+
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+
+
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  
+  
+  z-index: 5;          
+  pointer-events: auto;
+}
+
+.slide-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.slide-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.slide-content .btn {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+
+/*
+   SECTIONS
+ */
+section {
+  padding: 5rem 0;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* GRIDS
+ */
+.category-grid,
+.products-grid,
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/*
+   CATEGORY CARDS
+ */
+.category-card a,
+.shop-btn {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+}
+
+.category-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+}
+
+.category-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.category-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* 
+   PRODUCT CARDS
+ */
+.product-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  color: #ffd700;
+  font-size: 0.9rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* 
+   PRODUCT DETAIL PAGE */
+.product-detail {
+  padding: 120px 0 4rem;
+}
+
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.main-image {
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail-gallery {
+  display: flex;
+  gap: 1rem;
+}
+
+.thumbnail-gallery img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* 
+   CART PAGE
+ */
+.cart-page {
+  padding: 120px 0 5rem;
+}
+
+.cart-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+/* 
+   ORDER CONFIRMATION
+ */
+.confirmation-page {
+  padding: 120px 0 80px;
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.confirmation-card {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 4rem;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.success-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #28a745;
+  color: white;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+/* FOOTER
+ */
+.footer {
+  background: #2c3e50;
+  color: white;
+  padding: 3rem 0 1rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.footer a {
+  color: #bdc3c7;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+/* 
+   SCROLL TO TOP
+ */
+.scroll-top {
+  position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: #23c483;
+    border: none;
+    padding: 12px;      
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    display: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: none;
+  z-index: 1000;
+}
+
+/* 
+   GLOBAL BUTTON STYLE
+ */
+button,
+.btn {
+  padding: 1.1em 2.8em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #23c483;
+  color: #fff;
+  box-shadow: 0 15px 20px rgba(46,229,157,0.4);
+  transform: translateY(-6px);
+  
+  text-decoration: none;
+}
+
+button:active,
+.btn:active {
+  transform: translateY(-1px);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .product-detail-layout,
+  .cart-container {
+    grid-template-columns: 1fr;
+  }
+
+  .slide-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ================================
+   WHY CHOOSE MYSTHOP
+================================ */
+.features {
+  background: #ffffff;
+  padding: 5rem 0;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 4rem;
+  color: #333;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+}
+
+.feature-card {
+  background: #f6f6f2;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(26, 215, 117, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(9, 222, 144, 0.15);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ================================
+   SHOP NOW BUTTON FIX
+================================ */
+.shop-btn {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Remove default link styles */
+.shop-btn:link,
+.shop-btn:visited {
+  color: #000;
+}
+
+/* Hover already handled by global button */
+
+
+.category-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.category-info .btn {
+  margin-top: 12px;
+}
+
+
+button,
+.btn {
+  padding: 1.1em 2.8em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  color: #000;
+  background-color: #fff;
+  border-radius: 45px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* REMOVE DEFAULT LINK STYLES */
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+
+
+.add-cart.added {
+  background: #23c483 !important;
+  color: #fff !important;
+  transform: scale(1.05);
+  pointer-events: none;
+}

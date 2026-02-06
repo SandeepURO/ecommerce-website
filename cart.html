@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - MyShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+     <nav class="navbar">
+        <div class="brand">
+            <a href="index.html">My<span>Shop</span></a>
+        </div>
+        <div class="menu">
+            <a href="index.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M213.38 109.62 133.38 36.88a8 8 0 0 0-10.76 0L42.62 109.62A8 8 0 0 0 40 115.54V208a8 8 0 0 0 8 8h160a8 8 0 0 0 8-8V115.54a8 8 0 0 0-2.62-5.92Z" fill="none" stroke="currentColor" stroke-width="16"/>
+                    </svg>
+                </span>
+                <span class="link-title">Home</span>
+            </a>
+
+            <a href="products.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <rect x="40" y="40" width="176" height="176" rx="16" fill="none" stroke="currentColor" stroke-width="16"/>
+                        <line x1="40" y1="96" x2="216" y2="96" fill="none" stroke="currentColor" stroke-width="16"/>
+                    </svg>
+                </span>
+                <span class="link-title">Products</span>
+            </a>
+
+            <a href="category.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M32 80h72l24 24h96v96a16 16 0 0 1-16 16H48a16 16 0 0 1-16-16V80z" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="link-title">Categories</span>
+            </a>
+
+            <a href="search.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <circle cx="112" cy="112" r="64" fill="none" stroke="currentColor" stroke-width="16"/>
+                        <line x1="160" y1="160" x2="216" y2="216" fill="none" stroke="currentColor" stroke-width="16"/>
+                    </svg>
+                </span>
+                <span class="link-title">Search</span>
+            </a>
+
+            <a href="cart.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <circle cx="96" cy="216" r="16" fill="none" stroke="currentColor" stroke-width="16"/>
+                        <circle cx="176" cy="216" r="16" fill="none" stroke="currentColor" stroke-width="16"/>
+                        <path d="M32 40h24l24 120h112l24-80H72" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="link-title">Cart</span>
+            </a>
+
+            <a href="contact.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M222 182c-16 16-48 6-80-26s-42-64-26-80l24-24 40 40-24 24c8 16 24 32 40 40l24-24 40 40z" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="link-title">Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="cart-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Shopping Cart</h1>
+                <p id="cartEmptyMsg" style="display: none;">Your cart is empty. <a href="products.html">Continue Shopping</a></p>
+            </div>
+
+            <div class="cart-container">
+                <div class="cart-table" id="cartTableContainer">
+                    <table id="cartTable">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartItems">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-section">
+                        <h3>Cart Totals</h3>
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax (10%):</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total:</span>
+                            <span id="total">$0.00</span>
+                        </div>
+                        
+                        <div class="checkout-actions">
+                            <a href="checkout.html" class="checkout-btn">
+                                <i class="fas fa-credit-card"></i> Proceed to Checkout
+                            </a>
+                            <button id="continueShopping" class="continue-btn">Continue Shopping</button>
+                        </div>
+                    </div>
+
+                    <div class="coupon-section">
+                        <h4>Have a Coupon?</h4>
+                        <div class="coupon-input">
+                            <input type="text" id="couponCode" placeholder="Enter coupon code">
+                            <button id="applyCoupon">Apply</button>
+                        </div>
+                        <p id="couponMsg"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MyShop</h3>
+                    <p>Your trusted online store for quality products.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">↑</button>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

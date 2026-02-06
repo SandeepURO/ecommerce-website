@@ -1,0 +1,169 @@
+/* 
+   CHECKOUT PAGE
+ */
+
+.checkout-main {
+  padding: 120px 0 80px;
+  background: #f8f9fa;
+}
+
+/* HEADER */
+.checkout-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.checkout-header h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.checkout-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* GRID */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* 
+   ORDER SUMMARY
+ */
+
+.order-summary {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+}
+
+.order-summary h2 {
+  margin-bottom: 25px;
+}
+
+/* ITEM */
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.item-info img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.item-name {
+  font-weight: 600;
+}
+
+.item-qty {
+  font-size: 14px;
+  color: #666;
+}
+
+.item-price {
+  font-weight: 600;
+}
+
+/* TOTALS */
+.order-totals {
+  margin-top: 25px;
+}
+
+.total-line,
+.grand-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.grand-total {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* 
+   SHIPPING FORM
+ */
+
+.shipping-form-section {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+}
+
+.shipping-form-section h2 {
+  margin-bottom: 25px;
+}
+
+/* INPUT GROUPS */
+.input-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #23c483;
+  box-shadow: 0 0 0 3px rgba(35,196,131,0.2);
+}
+
+/* PLACE ORDER BUTTON */
+.order-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 45px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #23c483;
+  color: #fff;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 25px rgba(35,196,131,0.4);
+}
+
+/* 
+   RESPONSIVE */
+
+@media (max-width: 900px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}

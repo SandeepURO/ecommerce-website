@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | MyShop</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
+<link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+
+     <nav class="navbar">
+        <div class="brand">
+            <a href="index.html">My<span>Shop</span></a>
+        </div>
+        <div class="menu">
+            <a href="index.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M213.38 109.62 133.38 36.88a8 8 0 0 0-10.76 0L42.62 109.62A8 8 0 0 0 40 115.54V208a8 8 0 0 0 8 8h160a8 8 0 0 0 8-8V115.54a8 8 0 0 0-2.62-5.92Z" fill="none" stroke="currentColor" stroke-width="16"/>
+                    </svg>
+                </span>
+                <span class="link-title">Home</span>
+            </a>
+
+            <a href="products.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <rect x="40" y="40" width="176" height="176" rx="16" fill="none" stroke="currentColor" stroke-width="16"/>
+                        <line x1="40" y1="96" x2="216" y2="96" fill="none" stroke="currentColor" stroke-width="16"/>
+                    </svg>
+                </span>
+                <span class="link-title">Products</span>
+            </a>
+
+            <a href="category.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M32 80h72l24 24h96v96a16 16 0 0 1-16 16H48a16 16 0 0 1-16-16V80z" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="link-title">Categories</span>
+            </a>
+
+            <a href="search.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <circle cx="112" cy="112" r="64" fill="none" stroke="currentColor" stroke-width="16"/>
+                        <line x1="160" y1="160" x2="216" y2="216" fill="none" stroke="currentColor" stroke-width="16"/>
+                    </svg>
+                </span>
+                <span class="link-title">Search</span>
+            </a>
+
+            <a href="cart.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <circle cx="96" cy="216" r="16" fill="none" stroke="currentColor" stroke-width="16"/>
+                        <circle cx="176" cy="216" r="16" fill="none" stroke="currentColor" stroke-width="16"/>
+                        <path d="M32 40h24l24 120h112l24-80H72" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="link-title">Cart</span>
+            </a>
+
+            <a href="contact.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M222 182c-16 16-48 6-80-26s-42-64-26-80l24-24 40 40-24 24c8 16 24 32 40 40l24-24 40 40z" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="link-title">Contact</span>
+            </a>
+        </div>
+    </nav>
+
+<!-- SEARCH HEADER -->
+<section class="search-header">
+  <div class="container">
+    <h1>Search Products</h1>
+
+    <div class="search-container">
+      <input 
+        type="text" 
+        class="search-input" 
+        placeholder=" "
+        id="searchInput"
+        autocomplete="off"
+      />
+      <label class="label">Search products...</label>
+
+      <span class="clear-button" id="clearSearch">✕</span>
+      <span class="search-icon"></span>
+      <div class="shine"></div>
+
+      <div class="search-suggestions" id="suggestions"></div>
+    </div>
+  </div>
+</section>
+
+<section class="search-results">
+    <div class="container">
+        <p id="resultsCount">0 results found</p>
+        <div class="products-grid" id="searchResults"></div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 MyShop. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

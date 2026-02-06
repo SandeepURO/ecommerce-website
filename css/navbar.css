@@ -1,0 +1,174 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #e2dddd82;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* BRAND */
+.brand {
+  order: 1;
+}
+
+.brand a {
+  font-size: 26px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #222;
+}
+
+.brand span {
+  color: #27ae60;
+}
+
+/* MENU CONTAINER */
+.menu {
+  order: 2;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  display: flex;
+  gap: 8px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* LINKS */
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 50px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+  transition: width 0.25s ease-in-out;
+}
+
+/* HOVER BG */
+.link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f0f0f0;
+  border-radius: 10px;
+  transform: translateX(100%);
+  transition: transform 0.25s ease-in-out;
+  z-index: -1;
+}
+
+.link:hover {
+  width: 140px;
+}
+
+.link:hover::before {
+  transform: translateX(0);
+}
+
+/* ICON - FIXED */
+.link-icon {
+  width: 28px;
+  height: 28px;
+  font-size: 22px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 18px;
+  z-index: 2;
+}
+
+/* 🔥 SVG ICONS - THE FIX */
+.link-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+  stroke: #333 !important;
+  stroke-width: 2.5 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+  fill: none !important;
+}
+
+/* Hover icon color */
+.link:hover .link-icon svg {
+  stroke: #007bff !important;
+}
+
+/* Active link styling */
+.link.active {
+  background: #007bff;
+}
+
+.link.active .link-title {
+  color: white;
+}
+
+.link.active .link-icon svg {
+  stroke: white !important;
+}
+
+/* TEXT */
+.link-title {
+  margin-left: 45px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.25s ease-in-out;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.link:hover .link-title {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Cart count badge */
+#cartLink .link-title::after {
+  content: attr(data-count);
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: #ff4757;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+  
+  .menu {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0.3rem;
+  }
+  
+  .link {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .link:hover {
+    width: 120px;
+  }
+}

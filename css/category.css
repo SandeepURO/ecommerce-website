@@ -1,0 +1,103 @@
+/* CATEGORY HEADER */
+.category-header {
+    background: #f8f9fa;
+    padding: 60px 20px 30px;
+    text-align: center;
+}
+
+
+
+.category-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+
+}
+
+.category-header p {
+    color: #666;
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+
+/* CATEGORY SECTION */
+.category-section {
+    padding: 40px 0 70px;
+}
+
+/* GRID */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* CATEGORY CARD*/
+.category-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* ICON */
+.category-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.category-card h3 {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.category-card p {
+    font-size: 14px;
+    color: #777;
+}
+
+
+/*---------*/
+
+
+/* 
+   HOVER ACCENT LINE
+ */
+.category-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #23c483, #1abc9c);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.category-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* 
+   MOBILE RESPONSIVE
+ */
+@media (max-width: 768px) {
+  .category-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .category-card {
+    padding: 2.5rem 1.5rem;
+  }
+}

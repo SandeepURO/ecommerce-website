@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - MyShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+       <nav class="navbar">
+        <div class="brand">
+            <a href="index.html">My<span>Shop</span></a>
+        </div>
+        <div class="menu">
+            <a href="index.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M213.38 109.62 133.38 36.88a8 8 0 0 0-10.76 0L42.62 109.62A8 8 0 0 0 40 115.54V208a8 8 0 0 0 8 8h160a8 8 0 0 0 8-8V115.54a8 8 0 0 0-2.62-5.92Z" fill="none" stroke="currentColor" stroke-width="16"/>
+                    </svg>
+                </span>
+                <span class="link-title">Home</span>
+            </a>
+
+            <a href="products.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <rect x="40" y="40" width="176" height="176" rx="16" fill="none" stroke="currentColor" stroke-width="16"/>
+                        <line x1="40" y1="96" x2="216" y2="96" fill="none" stroke="currentColor" stroke-width="16"/>
+                    </svg>
+                </span>
+                <span class="link-title">Products</span>
+            </a>
+
+            <a href="category.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M32 80h72l24 24h96v96a16 16 0 0 1-16 16H48a16 16 0 0 1-16-16V80z" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="link-title">Categories</span>
+            </a>
+
+            <a href="search.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <circle cx="112" cy="112" r="64" fill="none" stroke="currentColor" stroke-width="16"/>
+                        <line x1="160" y1="160" x2="216" y2="216" fill="none" stroke="currentColor" stroke-width="16"/>
+                    </svg>
+                </span>
+                <span class="link-title">Search</span>
+            </a>
+
+            <a href="cart.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <circle cx="96" cy="216" r="16" fill="none" stroke="currentColor" stroke-width="16"/>
+                        <circle cx="176" cy="216" r="16" fill="none" stroke="currentColor" stroke-width="16"/>
+                        <path d="M32 40h24l24 120h112l24-80H72" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="link-title">Cart</span>
+            </a>
+
+            <a href="contact.html" class="link">
+                <span class="link-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                        <path d="M222 182c-16 16-48 6-80-26s-42-64-26-80l24-24 40 40-24 24c8 16 24 32 40 40l24-24 40 40z" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="link-title">Contact</span>
+            </a>
+        </div>
+    </nav>
+    <section class="product-detail">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> > <a href="products.html">Products</a> > <span id="productName">iPhone 15 Pro</span>
+            </nav>
+
+            <div class="product-detail-layout">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainProductImage" src="https://images.unsplash.com/photo-1592899677979-2a66990fc27c?w=500" alt="iPhone 15 Pro">
+                    </div>
+                    <div class="thumbnail-gallery">
+                        <img src="https://images.unsplash.com/photo-1592899677979-2a66990fc27c?w=100" alt="Image 1" data-img="https://images.unsplash.com/photo-1592899677979-2a66990fc27c?w=500">
+                        <img src="https://images.unsplash.com/photo-1602643784357-2e2e11a95b5e?w=100" alt="Image 2" data-img="https://images.unsplash.com/photo-1602643784357-2e2e11a95b5e?w=500">
+                        <img src="https://images.unsplash.com/photo-1599153483703-399b6bc563df?w=100" alt="Image 3" data-img="https://images.unsplash.com/photo-1599153483703-399b6bc563df?w=500">
+                        <img src="https://images.unsplash.com/photo-1581287053821-246156c7e1b1?w=100" alt="Image 4" data-img="https://images.unsplash.com/photo-1581287053821-246156c7e1b1?w=500">
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <div class="product-header">
+                        <h1 id="productTitle">iPhone 15 Pro</h1>
+                        <div class="rating" id="productRating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                            <span id="reviewCount">(128 reviews)</span>
+                        </div>
+                    </div>
+
+                    <div class="price-section">
+                        <div class="current-price" id="productPrice">$999</div>
+                        <div class="old-price">$1,199</div>
+                        <div class="discount">-17%</div>
+                    </div>
+
+                    <div class="product-description">
+                        <p id="productDesc">The latest iPhone with A17 Pro chip, titanium design, and advanced camera system. Perfect for photography enthusiasts and power users.</p>
+                    </div>
+
+                    <div class="product-meta">
+                        <span class="category"><i class="fas fa-tag"></i> Category: <strong id="productCategory">Electronics</strong></span>
+                        <span class="availability"><i class="fas fa-check-circle"></i> In Stock</span>
+                    </div>
+
+                    <div class="quantity-selector">
+                        <label>Quantity:</label>
+                        <div class="quantity-controls">
+                            <button class="qty-btn" id="qtyMinus">-</button>
+                            <input type="number" id="productQuantity" value="1" min="1">
+                            <button class="qty-btn" id="qtyPlus">+</button>
+                        </div>
+                    </div>
+
+                    <button class="add-to-cart-btn" id="addToCartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+
+                    <button class="buy-now-btn">
+                        <i class="fas fa-bolt"></i>
+                        Buy Now
+                    </button>
+
+                    <div class="features-list">
+                        <h3>Key Features:</h3>
+                        <ul>
+                            <li><i class="fas fa-shipping-fast"></i> Free Shipping</li>
+                            <li><i class="fas fa-shield-alt"></i> 1 Year Warranty</li>
+                            <li><i class="fas fa-undo"></i> 30 Day Returns</li>
+                            <li><i class="fas fa-credit-card"></i> Secure Payment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-products">
+        <div class="container">
+            <h2>Related Products</h2>
+            <div class="products-grid" id="relatedProducts">
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MyShop</h3>
+                    <p>Your trusted online store for quality products.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MyShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop">↑</button>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>

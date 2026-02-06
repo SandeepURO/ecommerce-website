@@ -1,0 +1,105 @@
+/* 
+    LAYOUT
+ */
+.confirmation-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* 
+   UIverse CARD 
+ */
+.confirmation-card {
+  width: 360px;
+  border-radius: 30px;
+  background: lightgrey;
+
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
+
+  padding: 40px 30px;
+  text-align: center;
+  transition: 0.35s ease;
+}
+
+.confirmation-card:hover {
+  transform: translateY(-8px);
+}
+
+/* 
+   CONTENT
+ */
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #27ae60;
+  color: white;
+  font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmation-card h1 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #2c3e50;
+}
+
+.message {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* 
+   ORDER DETAILS
+ */
+.order-details {
+  background: rgba(255,255,255,0.6);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.order-details p {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.status {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* 
+   BUTTON
+ */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 45px;
+  background: white;
+  color: black;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  background: #23c483;
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 20px rgba(46,229,157,0.4);
+}
